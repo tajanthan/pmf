@@ -1,10 +1,10 @@
-Proximal Mean-field for Neural Network Quantization - Code
+PMF - Code
 ==========================================================
 
 This code implments the PMF algorithm described in the following paper:
 
-["Proximal Mean-field for Neural Network Quantization"](https://arxiv.org/abs/1812.04353).
-Thalaiyasingam Ajanthan, Puneet K. Dokania, Richard Hartley, and Philip H. S. Torr.
+["Proximal Mean-field for Neural Network Quantization"](https://arxiv.org/abs/1812.04353),
+Thalaiyasingam Ajanthan, Puneet K. Dokania, Richard Hartley, and Philip H. S. Torr,
 ICCV, 2019.
 
 If you're using this code in a publication, please cite our paper.
@@ -27,8 +27,11 @@ Dependencies
 ------------
 
 [PyTorch](https://pytorch.org/get-started/locally/), tested with PyTorch 1.0, and torchvision 0.2.1 in Python 2.
+
 [numpy](https://numpy.org/)
+
 [pandas](https://pandas.pydata.org/)
+
 [bokeh](https://bokeh.pydata.org/en/latest/)    
 
 How to run the example
@@ -44,6 +47,7 @@ Acknowledgements
 ----------------------
 
 [BNN](https://github.com/itayhubara/BinaryNet.pytorch), for some utility functions.
+
 [ResNet/VGG](https://github.com/kuangliu/pytorch-cifar), for model definitions.
 
 
