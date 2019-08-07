@@ -1,0 +1,11 @@
+*.swp
+*.out
+*.csv
+*~
+*.bash
+*.pkl
+*.npz
+*.pyc
+out*/
+./Datasets/
+*fuse*
