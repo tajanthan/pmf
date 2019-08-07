@@ -1,5 +1,5 @@
-PMF - Code
-==========================================================
+Proximal Mean Field
+===================
 
 This code implments the PMF algorithm described in the following paper:
 
@@ -21,7 +21,7 @@ If you're using this code in a publication, please cite our paper.
 This code is for research purposes only.
 If you want to use it for commercial purpose please contact us.
 
-Contact: thalaiyasingam.ajanthan at anu.edu.au
+Contact: `thalaiyasingam.ajanthan at anu.edu.au`
 
 Dependencies
 ------------
