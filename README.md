@@ -7,6 +7,13 @@ This code implments the PMF algorithm described in the following paper:
 Thalaiyasingam Ajanthan, Puneet K. Dokania, Richard Hartley, and Philip H. S. Torr,
 ICCV, 2019.
 
+Extensive hyperparamter tuning improved the classification accuracies compared to the original paper. 
+The results are given below and the final hyperparameters can be found in `hyperparams.txt`.
+
+| CIFAR-10, VGG-16 | CIFAR-10, ResNet-18 | CIFAR-100, VGG-16 | CIFAR-100, ResNet-18 | TinyImageNet, ResNet-18 |
+| ---------------- | ------------------- | ----------------- | -------------------- | ----------------------- |
+| 91.40            | 93.24               | 64.71             | 71.56                | 51.52                   |
+
 If you're using this code in a publication, please cite our paper.
 
 ```
@@ -34,7 +41,7 @@ Dependencies
 How to run the example
 ----------------------
 
-Example scripts on how to run the code can be found in the _scripts/_ folder. 
+Example scripts on how to run the code can be found in the `scripts/` folder. 
 
 ```
 bash scripts/cifar10-resnet18.bash

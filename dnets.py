@@ -51,7 +51,7 @@ LR_DECAY = 'STEP'       # EXP, MSTEP
 LOG_INTERVAL = 100
 PR_INTERVAL = 100
 SAVE_NAME = ''          # best model file
-DATA_PATH = '../Datasets'
+DATA_PATH = './Datasets'
 PRETRAINED_MODEL = ''   # pre-trained model file
 EVAL = ''               # trained model to evaluate
 RESUME = ''             # checkpoint file to resume
@@ -120,6 +120,10 @@ def seed_torch():
     torch.cuda.manual_seed_all(RANDOM_SEED) # if you are using multi-GPU.
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
+
+def init_fn(worker_id):
+   random.seed(RANDOM_SEED + worker_id)
+   np.random.seed(RANDOM_SEED + worker_id)
 
 def main():
     # Get the CL arguments
@@ -252,9 +256,9 @@ def main():
         val_set = train_set
 
     train_loader = du.DataLoader(train_set, sampler=train_sampler, shuffle=(train_sampler is None),
-            batch_size=args.batch_size, **kwargs)
-    val_loader = du.DataLoader(val_set, sampler=val_sampler, batch_size=args.batch_size, **kwargs)
-    test_loader = du.DataLoader(test_set, batch_size=args.batch_size, **kwargs)
+            batch_size=args.batch_size, worker_init_fn=init_fn, **kwargs)
+    val_loader = du.DataLoader(val_set, sampler=val_sampler, batch_size=args.batch_size, worker_init_fn=init_fn, **kwargs)
+    test_loader = du.DataLoader(test_set, batch_size=args.batch_size, worker_init_fn=init_fn, **kwargs)
 
     if args.val_set == 'TEST':
         val_loader = test_loader
