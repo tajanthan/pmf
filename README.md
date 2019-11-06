@@ -10,9 +10,10 @@ ICCV, 2019.
 Extensive hyperparamter tuning improved the classification accuracies compared to the original paper. 
 The results are given below and the final hyperparameters can be found in `hyperparams.txt`.
 
-| CIFAR-10, VGG-16 | CIFAR-10, ResNet-18 | CIFAR-100, VGG-16 | CIFAR-100, ResNet-18 | TinyImageNet, ResNet-18 |
-| ---------------- | ------------------- | ----------------- | -------------------- | ----------------------- |
-| 91.40            | 93.24               | 64.71             | 71.56                | 51.52                   |
+|     CIFAR-10       |     CIFAR-100      | TinyImageNet |
+| VGG-16 | ResNet-18 | VGG-16 | ResNet-18 |  ResNet-18   |
+| -------| --------- | ------ | --------- | ------------ |
+| 91.40  | 93.24     | 64.71  | 71.56     | 51.52        |
 
 If you're using this code in a publication, please cite our paper.
 
